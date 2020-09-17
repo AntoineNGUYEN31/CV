@@ -1,0 +1,38 @@
+\documentclass{article}
+
+\usepackage[most]{tcolorbox}
+
+
+\newtcbtheorem{Summary}{\bfseries Summary}{enhanced,drop shadow={black!50!white},
+  coltitle=black,
+  top=0.3in,
+  attach boxed title to top right=
+  {xshift=0em,yshift=-\tcboxedtitleheight/2},
+  boxed title style={size=small,colback=pink}
+}{summary}
+
+
+\newtcolorbox[auto counter]{summary}[1][]{title={\bfseries Summary~\thetcbcounter},enhanced,drop shadow={black!50!white},
+  coltitle=black,
+  top=0.3in,
+  attach boxed title to top right=
+  {xshift=0pt},
+  boxed title style={size=small,colback=pink},#1}
+
+
+
+\begin{document}
+
+\begin{Summary}{}{firstsummary}
+Brontosaurs are thin at one end, thick in the middle and thin again on the other end
+\end{Summary}
+
+\begin{summary}[boxed title style={colback=yellow},colback=green]
+Brontosaurs are thin at one end, thick in the middle and thin again on the other end
+
+See excavations of Brontosaurs skeletons
+\end{summary}
+
+
+
+\end{document}

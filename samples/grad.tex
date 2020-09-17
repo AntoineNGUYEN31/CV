@@ -1,0 +1,31 @@
+\documentclass{beamer}
+\usepackage{tcolorbox,lipsum}
+\tcbuselibrary{skins}
+
+\makeatletter%
+\newtcolorbox{gradientbox}[1][]{%
+  enhanced,boxrule=0pt,boxsep=0pt,sharp corners,
+  before=\nointerlineskip\kern-2mm,%
+  width=\paperwidth,
+  enlarge left by=-\beamer@leftmargin-\beamer@leftsidebar,
+  enlarge right by=-\beamer@rightmargin-\beamer@rightsidebar,
+  frame hidden,interior style={left color=gray!05,right color=gray!50},
+  #1
+}
+\makeatother%
+
+\begin{document}
+
+\begin{frame}[t]
+  \begin{gradientbox}
+    \lipsum[1]
+  \end{gradientbox}
+\end{frame}
+
+\begin{frame}[t]
+  \begin{gradientbox}[top=8mm,bottom=8mm,left=10mm,right=10mm]
+    \lipsum[1]
+  \end{gradientbox}
+\end{frame}
+
+\end{document}

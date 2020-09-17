@@ -1,0 +1,43 @@
+%\documentclass[a4paper,svgnames,10pt]{book}
+\documentclass[10pt,A4]{article}
+
+\usepackage[utf8x]{inputenc}
+\usepackage{tikz}
+\usepackage{varwidth}
+\usepackage{linegoal}
+\usepackage[explicit]{titlesec}
+\usepackage[margin=1.5cm]{geometry}
+\usepackage{lipsum}
+
+\definecolor{myblue}{RGB}{158,158,255}
+
+\titleformat{\section}
+  {\normalfont\Large\bfseries}{}{0em}
+  {%
+  \begin{tikzpicture}
+  \node[inner xsep=0pt,text width=\textwidth,
+    align=left,left color=myblue,right color=myblue!10] 
+    {\begin{varwidth}[t]{5em}\thesection\hfill\end{varwidth}\hspace{0.5em}\parbox[t]{\linegoal}{\raggedright #1}};
+  \end{tikzpicture}%
+  }
+\titleformat{name=\section,numberless}
+  {\normalfont\Large\bfseries}{}{0em}
+  {%
+  \begin{tikzpicture}
+  \node[inner xsep=0pt,text width=\textwidth,
+    align=left,left color=myblue,right color=myblue!10] 
+    {\parbox[t]{\linewidth}{\raggedright#1}};
+  \end{tikzpicture}%
+  }
+
+\pagestyle{plain}
+
+\begin{document}
+
+\chapter{Test chapter}
+\section{A test numbered section with a really long title spanning several lines just for the example}
+\lipsum[4]
+\section*{A test unnumbered section with a really long title spanning several lines just for the example}
+\lipsum[4]
+
+\end{document}
