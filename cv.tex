@@ -23,6 +23,18 @@
    }
   \end{tikzpicture}
 }
+%wheel rating system
+\newcommand\wheelrate[2]{
+\pgfmathsetmacro\pgfxa{#1}
+  \begin{tikzpicture}[baseline=-1.5mm]
+    \foreach \i in {1,...,#2} {
+    \pgfmathparse{(\i<=#1?"wheel-on":"wheel-off")}
+    \edef\imgname{\pgfmathresult}
+    \draw (\i*2.25ex,0) node[inner sep=0pt] (whitehead)
+        {\includegraphics[height=3mm]{\imgname}};
+    }
+  \end{tikzpicture}
+}
 %
 % arrow
 \usetikzlibrary{fadings,shadows,shapes.arrows}
@@ -57,8 +69,9 @@
 %for cell's color of table
 \usepackage{xcolor,colortbl}
 
+%for images
 \usepackage{graphicx}
-\graphicspath{ {./} }
+\graphicspath{ {./images/} }
 
 %set margin
 \usepackage[a4paper]{geometry}		
@@ -146,13 +159,13 @@ Please dont hesitate to contact me to discuss about our future collaboration!"
 \textcolor{black}{\bf 2013 - 2017} & \textcolor{black}{\bf Multiphysics \& PLM software development engineer}
 \begin{itemize}
   \item \small Developed APIs enabling the data exchange between two simulation software under the european R\&D project TOICA
-  \item \small Partipated in the development of a demonstrator of the co-simulation capacity.
+  \item \small Partipated in the development of a demonstrator of the co-simulation capacity
 \end{itemize}\\
 %
 \textcolor{black}{\bf 2012 - 2013} & \textcolor{black}{\bf Aerodynamics simulation platform administrator}
 \begin{itemize}
   \item \small Provided supports for end-users of the simulation tools.
-  \item \small Renewed \& translated tools from out-of-date technologies to the new one.
+  \item \small Renewed \& translated tools from out-of-date technologies to the new one
 \end{itemize}
 %
 \end{tabular}
@@ -189,75 +202,75 @@ Please dont hesitate to contact me to discuss about our future collaboration!"
 \hline
 \multicolumn{2}{|c|}{\cellcolor{white} \bf DevOps Infrastructure} \\
 \hline
-Docker & \score{5}{5} \\
-Kubernetes & \score{4}{5} \\
-Rancher & \score{5}{5} \\
-Helm & \score{4}{5} \\
-AWS & \score{3}{5} \\
-Openshift & \score{2}{5} \\
+Docker & \wheelrate{5}{5} \\
+Kubernetes & \wheelrate{4}{5} \\
+Rancher & \wheelrate{5}{5} \\
+Helm & \wheelrate{4}{5} \\
+AWS & \wheelrate{3}{5} \\
+Openshift & \wheelrate{2}{5} \\
 \hline
 \multicolumn{2}{c}{} \\
 \hline
 \multicolumn{2}{|c|}{\cellcolor{white} \bf DevOps Components} \\
 \hline
-Git & \score{5}{5} \\
-Jenkins & \score{5}{5} \\
-Artifactory & \score{5}{5} \\
-Sonarqube & \score{4}{5} \\
-Ansible & \score{3}{5} \\
+Git & \wheelrate{5}{5} \\
+Jenkins & \wheelrate{5}{5} \\
+Artifactory & \wheelrate{5}{5} \\
+Sonarqube & \wheelrate{4}{5} \\
+Ansible & \wheelrate{3}{5} \\
 \hline
 \multicolumn{2}{c}{} \\
 \hline
 \multicolumn{2}{|c|}{\cellcolor{white} \bf Front end} \\
 \hline
-Angular & \score{3}{5} \\
-Djanggo & \score{3}{5} \\
-React & \score{2}{5} \\
-HTML & \score{4}{5} \\
-CSS & \score{4}{5} \\
+Angular & \wheelrate{3}{5} \\
+Djanggo & \wheelrate{3}{5} \\
+React & \wheelrate{2}{5} \\
+HTML & \wheelrate{4}{5} \\
+CSS & \wheelrate{4}{5} \\
 \hline
 \multicolumn{2}{c}{} \\
 \hline
 \multicolumn{2}{|c|}{\cellcolor{white} \bf Back end} \\
 \hline
-Python & \score{5}{5} \\
-VB.NET & \score{5}{5} \\
-Java & \score{4}{5} \\
-C++ & \score{4}{5} \\
-Node.js & \score{3}{5} \\
+Python & \wheelrate{5}{5} \\
+VB.NET & \wheelrate{5}{5} \\
+Java & \wheelrate{4}{5} \\
+C++ & \wheelrate{4}{5} \\
+Node.js & \wheelrate{3}{5} \\
 \hline
 \multicolumn{2}{c}{} \\
 \hline
 \multicolumn{2}{|c|}{\cellcolor{white} \bf Database} \\
 \hline
-mySQL & \score{4}{5} \\
-Marklogic & \score{3}{5} \\
-MongoDB & \score{3}{5} \\
+mySQL & \wheelrate{4}{5} \\
+Marklogic & \wheelrate{3}{5} \\
+MongoDB & \wheelrate{3}{5} \\
 \hline
 \multicolumn{2}{c}{} \\
 \hline
 \multicolumn{2}{|c|}{\cellcolor{white} \bf Project Manangement Tools} \\
 \hline
-version One & \score{4}{5} \\
-Trello & \score{5}{5} \\
-GANTT Chart & \score{4}{5} \\
+version One & \wheelrate{4}{5} \\
+Trello & \wheelrate{5}{5} \\
+GANTT Chart & \wheelrate{4}{5} \\
 \hline
 \multicolumn{2}{c}{} \\
 \hline
 \multicolumn{2}{|c|}{\cellcolor{white} \bf Scientific Simulation Software} \\
 \hline
-NX/TMG & \score{5}{5} \\
-Ansys & \score{3}{5} \\
-AMESim & \score{4}{5} \\
+NX/TMG & \wheelrate{5}{5} \\
+Ansys & \wheelrate{3}{5} \\
+AMESim & \wheelrate{4}{5} \\
 \hline
 \multicolumn{2}{c}{} \\
 \hline
 \multicolumn{2}{|c|}{\cellcolor{white} \bf Languages} \\
 \hline
-Vietnamese & \score{5}{5} \\
-English & \score{5}{5} \\
-French & \score{5}{5} \\
-Spanish & \score{2}{5} \\
+Vietnamese & \wheelrate{5}{5} \\
+English & \wheelrate{5}{5} \\
+French & \wheelrate{5}{5} \\
+Spanish & \wheelrate{2}{5} \\
 \hline
 \end{tabular}
 %
