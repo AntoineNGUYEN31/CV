@@ -28,10 +28,10 @@
 \pgfmathsetmacro\pgfxa{#1}
   \begin{tikzpicture}[baseline=-1.5mm]
     \foreach \i in {1,...,#2} {
-    \pgfmathparse{(\i<=#1?"wheel-on":"wheel-off")}
+    \pgfmathparse{(\i<=#1?"container-on":"container-off")}
     \edef\imgname{\pgfmathresult}
     \draw (\i*2.25ex,0) node[inner sep=0pt] (whitehead)
-        {\includegraphics[height=3mm]{\imgname}};
+        {\includegraphics[height=3.5mm]{\imgname}};
     }
   \end{tikzpicture}
 }
@@ -73,6 +73,10 @@
 \usepackage{graphicx}
 \graphicspath{ {./images/} }
 
+%symbols
+\usepackage{marvosym}
+\usepackage{fontawesome}
+
 %set margin
 \usepackage[a4paper]{geometry}		
 \geometry{top=1cm, bottom=-.6cm, left=0.4cm, right=1cm} 
@@ -100,16 +104,16 @@
 \begin{minipage}[c]{0.3\textwidth}
 \textsc{\large \bf Minh Quan NGUYEN}\\
 \textcolor{blue}{\large \bf DevOps Solution Architect }\vspace{5pt}\\
-8+ yrs of exp, 33 yr-old\\
-+33 6 10 87 32 30\\
+\MineSign \hfill 8+ yrs of exp, 33 yr-old\\
+\Telefon \hfill +33 6 10 87 32 30\\
 %\textcolor{blue}{\underline{\bf nguyen.ensma@gmail.com}}\\
-\textcolor{blue}{\bf nguyen.ensma@gmail.com}\\
-3 rue des bouquetins\\
-31200 Toulouse\\
-Nationality: French \& Vietnamese\\
-Driving license: B\\
+\Letter \hfill \textcolor{blue}{\bf nguyen.ensma@gmail.com}\\
+\faHome \hfill 31200 Toulouse\\
+\faFlag \hfill French \& Vietnamese\\
+\faCar \hfill driving licence B\\
 \end{minipage}
 \begin{minipage}[c]{0.5\textwidth}
+\hspace*{2mm}
 \begin{tabular}{|P{0.4\textwidth}P{0.4\textwidth}|}
 \hline
 \vspace{5mm} & \vspace{5mm}\\
@@ -133,6 +137,7 @@ Please dont hesitate to contact me to discuss about our future collaboration!"
 %---------------------------------------------------------------------------------------
 %	EXPERIENCE
 %---------------------------------------------------------------------------------------
+%\vspace*{-10mm}
 \section*{\hspace{0.5cm}Professional experience}
 %
 \begin{tabular}{p{2cm}p{11cm}}
@@ -164,8 +169,8 @@ Please dont hesitate to contact me to discuss about our future collaboration!"
 %
 \textcolor{black}{\bf 2012 - 2013} & \textcolor{black}{\bf Aerodynamics simulation platform administrator}
 \begin{itemize}
-  \item \small Provided supports for end-users of the simulation tools.
-  \item \small Renewed \& translated tools from out-of-date technologies to the new one
+  \item \small Provided supports for end-users of the simulation tools
+  \item \small Renewed \& translated tools from legacy technologies to the new ones
 \end{itemize}
 %
 \end{tabular}
@@ -177,11 +182,12 @@ Please dont hesitate to contact me to discuss about our future collaboration!"
 \section*{\hspace{0.5cm}Diploma \& Certificates}
 %
 \begin{tabular}{P{2cm}p{11cm}}
+\textcolor{black}{\bf 2020} & \textcolor{black}{ \bf Certificate - Certified Kubernetes Administrator (CKA)}  \newline \small \textcolor{gray}{Udemy} \\
 \textcolor{black}{\bf 2019} & \textcolor{black}{ \bf Certificate - SAFe for team}  \newline \small \textcolor{gray}{Scaled Agile} \\
 \textcolor{black}{\bf 2019} & \textcolor{black}{ \bf Certificate - Marlogic Database fundamentals} \newline \small \textcolor{gray}{MarkLogic training course} \\
 \textcolor{black}{\bf 2018} & \textcolor{black}{ \bf Certificate - Architecting Smart IoT devices} \newline \small \textcolor{gray}{Coursera EIT Digital} \\
 \textcolor{black}{\bf 2016} & \textcolor{black}{ \bf Certificate - Agile \& Scrum method} \newline \small \textcolor{gray}{Actinuum SARL} \\
-\textcolor{black}{\bf 2015} & \textcolor{black}{ \bf Certificate - Module ECS in NX software} \newline \small \textcolor{gray}{Seimens Industry Software SAS} \\
+%\textcolor{black}{\bf 2015} & \textcolor{black}{ \bf Certificate - Module ECS in NX software} \newline \small \textcolor{gray}{Seimens Industry Software SAS} \\
 \textcolor{black}{\bf 2011} & \textcolor{black}{ \bf French Diplôme d'Ingénieur} \newline \small \textcolor{gray}{ISAE-ENSMA (major de promo)} \\
 \end{tabular}
 %
@@ -203,7 +209,7 @@ Please dont hesitate to contact me to discuss about our future collaboration!"
 \multicolumn{2}{|c|}{\cellcolor{white} \bf DevOps Infrastructure} \\
 \hline
 Docker & \wheelrate{5}{5} \\
-Kubernetes & \wheelrate{4}{5} \\
+Kubernetes & \wheelrate{5}{5} \\
 Rancher & \wheelrate{5}{5} \\
 Helm & \wheelrate{4}{5} \\
 AWS & \wheelrate{3}{5} \\
@@ -247,14 +253,16 @@ mySQL & \wheelrate{4}{5} \\
 Marklogic & \wheelrate{3}{5} \\
 MongoDB & \wheelrate{3}{5} \\
 \hline
-\multicolumn{2}{c}{} \\
+%
+%\multicolumn{2}{c}{} \\
+%\hline
+%\multicolumn{2}{|c|}{\cellcolor{white} \bf Project Manangement Tools} \\
+%\hline
+%version One & \wheelrate{4}{5} \\
+%Trello & \wheelrate{5}{5} \\
+%GANTT Chart & \wheelrate{4}{5} \\
 \hline
-\multicolumn{2}{|c|}{\cellcolor{white} \bf Project Manangement Tools} \\
-\hline
-version One & \wheelrate{4}{5} \\
-Trello & \wheelrate{5}{5} \\
-GANTT Chart & \wheelrate{4}{5} \\
-\hline
+%
 \multicolumn{2}{c}{} \\
 \hline
 \multicolumn{2}{|c|}{\cellcolor{white} \bf Scientific Simulation Software} \\
